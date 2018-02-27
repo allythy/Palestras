@@ -200,11 +200,15 @@
 				  </script>
 				</section>
 
+				<section>
+					<img src="img/local-operations.png" alt="">
+				</section>
+
 				<section data-markdown>
 					<script type="text/template">
 					<p class="align-left">Crie um arquivo chamado aula1:</p>
 					```
-					touch aula
+					touch aula1
 					```
 					<p class="align-left">Digite o comando abaixo para ver o estado do repositório:</p>
 					```
@@ -214,7 +218,7 @@
 				</section>
 
 				<section>
-					<img src="img/local-operations.png" alt="">
+					<img src="img/status-file.png" alt="">
 				</section>
 
 				<section data-markdown>
@@ -389,8 +393,169 @@
 						```
 					</script>
 				</section>
+			</section>
+
+			<section>
+				<section>
+					<h3>Trabalhando com Brach</h3>
+				</section>
+
+				<section id="fragment">
+						<h3>O que é uma Branch ?</h3>
+						<p class="fragment align-left">Uma branch é uma novo linha de desenvolvimento que permite isolar o código de uma nova funcionalidade, matendo a linha base estáve, evitando o represamento de código. No git, o uma branch é apenas uma referência para um commit.</p>
+				</section>
+
+				<section id="fragment" data-markdown >
+					<script type="text/template">
+						<p class="align-left ">Criando uma branch</p>
+						```
+						git branch nome-da-branch
+						```
+						<p class="align-left">Exibindo as branch do repositório</p>
+						```
+						git branch
+						```
+						<p class="align-left">Trocando de brach</p>
+						```
+						git checkout nome-da-branch
+						```
+					</script>
+				</section>
+
+				<section id="fragment" data-markdown >
+					<script type="text/template">
+						### Como o Git sabe o branch em que você está atualmente ?
+
+						<p style="color:rgb(41, 175, 135);"class="fragment align-left">Ele mantém um ponteiro especial chamado <span style="color: rgb(193, 43, 66);">HEAD</span></p>
+						<img  class="fragment" src="img/head.png" alt="" height="400" width="600">
+
+					</script>
+				</section>
+
+				<section data-markdown >
+					<script type="text/template">
+						<p class="align-left">Cenário:</p>
+						```
+						touch arquivo1
+						git add .
+						git commit -m" branch testing"
+						```
+
+						```
+						git checkout master
+						```
+					</script>
+				</section>
+
+				<section id="fragment" data-markdown >
+					<script type="text/template">
+						### Fazendo o merge
+
+						```
+						git merge nome-da-branch
+						```
+					</script>
+				</section>
+
+				<section id="fragment" data-markdown >
+					<script type="text/template">
+						### O que é um merge Fast forward ?
+						<img class="fragment"src="img/Fast-forward.png" alt="">
+					</script>
+				</section>
+
+
+				<section data-markdown >
+					<script type="text/template">
+						### Criando uma divergência entre as branch
+
+						<p class="align-left">Cenário:</p>
+
+						```
+						touch arquivo3
+						git add .
+						git commit -m" branch master"
+						git checkout testing
+						```
+
+						```
+						touch arquivo2
+						git add .
+						git commit -m" branch testing"
+						git checkout master
+						```
+					</script>
+				</section>
+
+				<section>
+					<img src="img/divergent.png" alt="">
+				</section>
+
+				<section data-markdown >
+					<script type="text/template">
+						<p class="align-left">Fazendo o merge</p>
+
+						```
+						git merge testing
+						```
+					</script>
+				</section>
+
+				<section data-markdown >
+					<script type="text/template">
+						### Gerando um conflito
+
+						<p class="align-left">Cenário:</p>
+						```
+						vim arquivo1
+						git add .
+						git commit -m" branch master"
+						git checkout testing
+						```
+
+						```
+						vim arquivo1
+						git add .
+						git commit -m" branch testing"
+						git checkout master
+						```
+					</script>
+				</section>
+
+				<section data-markdown >
+					<script type="text/template">
+						### Resolvendo um conflito
+						```
+						git status
+						```
+					</script>
+				</section>
+
+				<section data-markdown >
+					<script type="text/template">
+						### Resolvendo um conflito
+						```
+						<<<<<<< HEAD
+						<h1>titulo</h1>
+						=======
+						<h1>outro titulo</h1>
+						>>>>>>> testing
+						```
+
+						```
+						git add .
+						```
+
+						```
+						git commit
+						```
+					</script>
+				</section>
+
+
 
 			</section>
+
 		</div>
 	</div>
 
