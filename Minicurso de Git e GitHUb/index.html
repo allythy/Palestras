@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html>
 
 <head>
@@ -46,7 +46,7 @@
 			</section>
 
 			<section data-background="img/allythy.png"></section>
-			<section data-background="img/clara.png"></section>
+			<!-- <section data-background="img/clara.png"></section> -->
 
 			<section>
 				<section id="fragment">
@@ -281,6 +281,15 @@
 						```
 						git log --oneline
 						```
+						<p class="align-left">Mostrando o commit de autor:</p>
+						```
+						git log --author=allythy
+						```
+						<p class="align-left">Mostrando o commit de autor:</p>
+						```
+						git shortlog
+						```
+
 					</script>
 				</section>
 				<section data-markdown>
@@ -335,7 +344,7 @@
 						```
 						<p class="align-left">Quero descartar essa modificação:</p>
 						```
-						git checkout -- arquivo
+						git checkout arquivo
 						```
 
 					</script>
@@ -348,16 +357,22 @@
 						```
 						git reset arquivo
 						```
-						ou
-						```
-						git reset diretório
-						```
 					</script>
 				</section>
 
 				<section data-markdown>
 					<script type="text/template">
 						### Desfazendo um commit
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+
+						--soft
+						--mixed
+						--hard
+
 					</script>
 				</section>
 
@@ -375,7 +390,7 @@
 					<script type="text/template">
 						Desfaz um commit, mas deixa os arquivos na working directory
 						```
-						git reset HEAD~1
+						git reset --mixed HEAD~1
 						```
 					</script>
 				</section>
@@ -410,7 +425,7 @@
 
 			<section>
 				<section>
-					<h3>Trabalhando com Bransch</h3>
+					<h3>Trabalhando com Branch</h3>
 				</section>
 
 				<section id="fragment">
@@ -664,7 +679,6 @@
 			<section>
 				<h3>Contatos</h3>
 				<p class="align-left">Allythy: <a href="https://t.me/allythy">Telegram</a>, <a href="https://github.com/allythy">GitHub</a>, <a href="https://allythy.github.io/">Site</a></p>
-				<p class="align-left">Clara: <a href="https://telegram.me/claranobre">Telegram</a>, <a href="https://github.com/claranobre">GitHub</a></p>
 			</section>
 
 
