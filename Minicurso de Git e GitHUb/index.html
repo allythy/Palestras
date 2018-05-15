@@ -625,18 +625,61 @@
 
 				<section data-markdown>
 					<script type="text/template">
-						### Baixando os dados do repositório remoto:
+						### Enviando arquivos para o repositório remoto
 
 						<p class="align-left">Sintaxe:</p>
 
 						```
-						git fetch [nome-remoto]
+						git push [nome-remoto] [branch]
 						```
 
 						<p class="align-left">Exemplo:</p>
 
 						```
-						git fetch site
+						git push origin master
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Baixando arquivos do repositório remoto
+
+						```
+						git pull
+						```
+
+						ou
+
+						<p class="align-left">Sintaxe:</p>
+						```
+						git fetch [nome-remoto]
+						```
+						<p class="align-left">Exemplo:</p>
+						```
+						git fetch origin
+						```
+
+						```
+						git merge origin/master
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						### Renomeando Remotos
+
+
+						<p class="align-left">Sintaxe:</p>
+
+						```
+						git remote rename [nome-atual] [novo-nome]
+						```
+
+						<p class="align-left">Exemplo:</p>
+
+						```
+						git remote rename site blog
 						```
 					</script>
 				</section>
