@@ -16,5 +16,5 @@ Slides dos minicursos que ministrei
 * [Introdução de Git GitHUb](slides/Minicurso-de-Git-e-Github)
 * [Linha de Comando do Sistema GNU](slides/Minicurso-de-Linha-de-Comando-do-Sistema-GNU)
 * [Do Terminal GNU Linux ao Python](slides/Minicurso-Do-Terminal-GNU-Linux-ao-Python)
-* [Introducao ao mundo python](#)
+* [Introducao ao mundo python](slides/introducao-ao-mundo-python)
 * [Introducao ao Git e GitLab](#)
