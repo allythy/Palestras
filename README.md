@@ -9,6 +9,7 @@ Slides das palalestras que ministrei
 * [Criando docomentacao com MkDocs](slides/Criando-docomentacao-com-MkDocs)
 * [Entre no bloco do python](slides/entre-no-bloco-do-python)
 * [O casamento sagrado entre o Pipfile pip e Virtualenv](slides/O-casamento-sagrado-entre-o-Pipfile-pip-e-Virtualenv)
+* [Criando uma command-line interface(CLI) com Click](slides/criando-uma-cli-com-click)
 * [O que e Software Livre e a comunidade Potilivre](slides/O-que-e-Software-Livre-e-a-comunidade-Potilivre)
 
 # Minicursos
